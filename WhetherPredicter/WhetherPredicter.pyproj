@@ -23,7 +23,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Analizaton_Whether.py" />
+    <Compile Include="Analizaton_Weather.py" />
     <Compile Include="mainForm.py" />
     <Compile Include="main.py" />
   </ItemGroup>

@@ -1,5 +1,5 @@
 ﻿import tkinter as tk
-from Analizaton_Whether import Day, WhetherPredicter
+from Analizaton_Weather import Day, WeatherPredicter
 import pandas as pd
 from tkinter import ttk
 import matplotlib.pyplot as plt
@@ -7,9 +7,9 @@ from datetime import datetime, timedelta
 import threading
 
 class mainForm:
-    def __init__(self, whether_predict):
+    def __init__(self, weather_predict):
         self.day = None
-        self.whether_predict = whether_predict;
+        self.whether_predict = weather_predict;
 
     def calculate_weather_button(self):
         thread = threading.Thread(target=self.calculate_weather)

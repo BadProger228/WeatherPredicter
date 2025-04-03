@@ -48,7 +48,7 @@ class Day:
             result.append(35.74 + 0.6215 * temperature - 35.75 * (wind_speed ** 0.16) + 0.4275 * temperature * (wind_speed ** 0.16))
         return result
         
-class WhetherPredicter:
+class WeatherPredicter:
     def __init__(self, path_to_table=None):
         self.path_to_table = path_to_table
         self.model = None
@@ -112,7 +112,7 @@ class WhetherPredicter:
         model.save('my_model.h5')
         joblib.dump(self.scaler, fr'{os.getcwd()}\scaler_model.pkl')
     
-    def predict_whether(self, full_date):
+    def predict_weather(self, full_date):
         input_data = pd.DataFrame({'timestamp': [full_date]})
         input_data = self.preprocess_data(input_data)
 
@@ -122,7 +122,7 @@ class WhetherPredicter:
         
         return predicted_weather
     
-    def predict_whether_for_long_time(self, start_date, end_date, dx):
+    def predict_weather_for_long_time(self, start_date, end_date, dx):
         
         start_date = start_date.replace(hour=0, minute=0, second=0)
         end_date = end_date.replace(hour=0, minute=0, second=0)
@@ -133,7 +133,7 @@ class WhetherPredicter:
         changet_date = start_date;
         while start_date.date() < end_date.date():
                
-             info_for_day.append(self.predict_whether(start_date))
+             info_for_day.append(self.predict_weather(start_date))
              start_date += pd.Timedelta(hours=dx)
              
              if(changet_date.date() != start_date.date()):
