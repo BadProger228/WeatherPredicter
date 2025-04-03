@@ -1,4 +1,4 @@
-# Weather Prediction
+# Weather Predicter
 
 ## Description
 **Weather Prediction** is a machine learning-based application that predicts the weather based on historical hourly weather data spanning the last 100 years for a specific region. The application trains a neural network model and saves it for future use. Users can input a date range to generate weather predictions, view results in a list, and display temperature and wind speed graphs. Additionally, the application provides an option to predict the temperature for the next day with a single button click.
